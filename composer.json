@@ -1,0 +1,12 @@
+{
+	"name" : "Przelewy24",
+	"description" : "Przelewy23 api Package By Piwko Patryk",
+	"type" : "laravel",
+	"license" : "MIT",
+	"minimum-stability" : "dev",
+	"autoload" : {
+		"psr-4" : {
+			"Przelewy24\\" : "src"
+		}
+	}
+}
