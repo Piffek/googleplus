@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Przelewy24\\' => array($baseDir . '/src'),
+    'GooglePlus\\' => array($baseDir . '/src'),
 );

@@ -1,10 +1,10 @@
 <?php
 
-namespace Przelewy24;
+namespace GooglePlus;
 
 use Illuminate\Support\ServiceProvider;
 
-class Przelewy24ServiceProvider extends ServiceProvider{
+class GooglePlusServiceProvider extends ServiceProvider{
     
     public function boot(){
         $this->loadRoutesFrom(__DIR__ . '/views/routes.php');

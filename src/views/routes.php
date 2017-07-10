@@ -1,3 +1,3 @@
 <?php
 
-Route::get('/', 'Przelewy24\UrlGenerator\BaseUrl@testConnection');
+Route::get('/', 'GooglePlus\UrlGenerator\BaseUrl@testConnection');

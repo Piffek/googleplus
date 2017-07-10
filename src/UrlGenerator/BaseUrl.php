@@ -1,6 +1,6 @@
 <?php
 
-namespace Przelewy24\UrlGenerator;
+namespace GooglePlus\UrlGenerator;
 
 class BaseUrl{
     
@@ -12,7 +12,7 @@ class BaseUrl{
     }
     
     public function testConnection(){
-        $url =  'https://secure.przelewy24.pl/testConnection';
+        $url =  '';
         return $this->curl($url);
     }
 }
