@@ -8,8 +8,9 @@ use Illuminate\Support\ServiceProvider;
 class GooglePlusServiceProvider extends ServiceProvider{
     
     public function boot(){
-        $this->loadRoutesFrom(__DIR__ . '/views/routes.php');
+        $this->loadRoutesFrom(__DIR__ . '/routes/routes.php');
         $this->publishes([__DIR__ . '/config.php' => 'config.php']);
+        $this->loadViewsFrom(__DIR__ . '/views', 'view');
     }
     
     public function register(){ 
