@@ -1,1 +1,1 @@
-"# przelewy24" 
+Wrapper to google plus auth.
