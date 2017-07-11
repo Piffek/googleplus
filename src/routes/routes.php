@@ -1,3 +1,3 @@
 <?php
 
-Route::get('/', 'GooglePlus\Client@testConnection');
+Route::get('/', 'GooglePlus\Client@index');

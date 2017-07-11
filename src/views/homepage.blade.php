@@ -1,1 +1,1 @@
-{{ userdata->id }}
+<a href="{{ auth_url }}">Press</a>
