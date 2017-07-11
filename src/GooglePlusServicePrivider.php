@@ -15,7 +15,7 @@ class GooglePlusServiceProvider extends ServiceProvider{
     
     public function register(){ 
         $this->mergeConfigFrom(__DIR__ . '/config.php', 'google');
-        $this->app->singleton('GooglePlus\GoogleClient\Client', function($app){
+        $this->app->singleton('GooglePlus\Client', function($app){
             return new Client();
         });
     }

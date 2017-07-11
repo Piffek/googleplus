@@ -28,9 +28,7 @@ class Client{
     
     public function index(){
         $authUrl = $this->client->createAuthUrl();
-        $userData = $this->getUserData($this->authService);
-        print_r($userData);
-        return view('view::homepage', compact('authUrl', 'userData'));
+        return view('view::homepage', compact('authUrl'));
     }
     
     public function autenticate($code){
@@ -44,6 +42,10 @@ class Client{
     public function setTokenOfSession($session){
         $this->client->setAccessToken($session);
        
+    }
+    
+    public function afterRedirect(){
+        $userData = $this->getUserData($this->authService);
     }
     
     public function getUserData($authService){
