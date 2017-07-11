@@ -2,6 +2,8 @@
 
 namespace GooglePlus;
 
+use Illuminate\Support\Facades\Session;
+
 class Client{
     
     public $config;
@@ -27,33 +29,32 @@ class Client{
     }
     
     public function index(){
+        
         $authUrl = $this->client->createAuthUrl();
         return view('view::homepage', compact('authUrl'));
     }
     
-    public function autenticate($code){
-        if(isset($code)){
-            $this->client->authenticate($code);
-            session(['access_token' => $this->client->getAccessToken()]);
+   
+    public function afterRedirect(){
+     
+        if(isset($_GET['code'])){
+            $this->client->authenticate($_GET['code']);
             return redirect($this->config['redirect_url']);
         }
-    }
-    
-    public function setTokenOfSession($session){
-        $this->client->setAccessToken($session);
-       
-    }
-    
-    public function afterRedirect(){
-        $userData = $this->getUserData($this->authService);
-    }
-    
-    public function getUserData($authService){
-        return $authService->userinfo->get();
-    }
-    
-    public function getRequest($request){
-        return $request;
+        
+        session()->put('access_token', $this->client->getAccessToken());
+        
+        
+        if(session('access_token')){
+            $this->client->setAccessToken(session('access_token'));
+        }
+        
+        if($this->client->getAccessToken()){
+            $userData = $this->authService->userinfo->get();
+
+        }
+      
+        return view('view::homepage', compact('userData'));
     }
     
 }
