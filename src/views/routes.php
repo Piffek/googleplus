@@ -1,3 +1,3 @@
 <?php
 
-Route::get('/', 'GooglePlus\UrlGenerator\BaseUrl@testConnection');
+Route::get('/', 'GooglePlus\Client@testConnection');

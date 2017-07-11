@@ -8,5 +8,8 @@
 		"psr-4" : {
 			"GooglePlus\\" : "src"
 		}
+	},
+	"require" : {
+		"google/apiclient" : "^2.0"
 	}
 }
