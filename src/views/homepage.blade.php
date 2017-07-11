@@ -1,1 +1,2 @@
-<a href="{{ auth_url }}">Press</a>
+<a href="{{ $authUrl }}">Press</a>
+
