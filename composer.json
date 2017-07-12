@@ -1,36 +1,17 @@
 {
 	"name" : "google/googleplus",
 	"description" : "Google api php client wrapper with Cloud Platform and Laravel 4 & 5 support",
-	"homepage" : "https://github.com/piffek/googleplus",
-	"keywords" : [
-		"laravel",
-		"google",
-		"cloud platform"
-	],
-	"license" : "MIT",
 	"authors" : [{
 			"name" : "Patryk Piwko"
 		}
 	],
+	"minimum-stability" : "dev",
 	"require" : {
-		"php" : ">=5.4.0",
-		"illuminate/support" : "~5",
 		"google/apiclient" : "^2.0"
-	},
-	"require-dev" : {
-		"phpunit/phpunit" : "4.*",
-		"mockery/mockery" : "0.9.*"
 	},
 	"autoload" : {
 		"psr-4" : {
 			"GooglePlus\\" : "src/"
 		}
-	},
-	"extra" : {
-		"branch-alias" : {
-			"dev-master" : "3.0.x-dev"
-		}
-	},
-	"minimum-stability" : "dev",
-	"prefer-stable" : true
+	}
 }
