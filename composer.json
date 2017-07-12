@@ -1,11 +1,12 @@
 {
-	"name" : "piffek/googleplus",
-	"description" : "Google api php client wrapper with Cloud Platform and Laravel 4 & 5 support",
+	"name" : "My Repository",
+	"homepage" : "https://github.com/Piffek/googleplus",
 	"repositories" : [{
 			"type" : "vcs",
 			"url" : "https://github.com/Piffek/googleplus"
 		}
 	],
+	"require-all" : true,
 	"authors" : [{
 			"name" : "Patryk Piwko"
 		}
