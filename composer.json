@@ -1,5 +1,5 @@
 {
-	"name" : "Google+",
+	"name" : "Piffek/googleplus",
 	"description" : "Google+ wrapper api Package By Piwko Patryk",
 	"type" : "laravel",
 	"license" : "MIT",
