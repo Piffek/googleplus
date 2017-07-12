@@ -1,7 +1,7 @@
 {
-	"name" : "Piffek/googleplus",
+	"name" : "piffek/googleplus",
 	"description" : "Google+ wrapper api Package By Piwko Patryk",
-	"type" : "laravel",
+	"type" : "library",
 	"license" : "MIT",
 	"minimum-stability" : "dev",
 	"autoload" : {
