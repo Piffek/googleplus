@@ -2,19 +2,14 @@
 	"name" : "My Repository",
 	"homepage" : "https://github.com/Piffek/googleplus",
 	"repositories" : [{
-			"type" : "vcs",
+			"type" : "composer",
 			"url" : "https://github.com/Piffek/googleplus"
 		}
 	],
-	"require-all" : true,
-	"authors" : [{
-			"name" : "Patryk Piwko"
-		}
-	],
-	"minimum-stability" : "dev",
 	"require" : {
 		"google/apiclient" : "^2.0"
 	},
+	"minimum-stability" : "dev",
 	"autoload" : {
 		"psr-4" : {
 			"GooglePlus\\" : "src/"
