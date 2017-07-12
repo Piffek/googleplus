@@ -1,5 +1,5 @@
 {
-	"name" : "piffek/google-apiclient",
+	"name" : "piffek/googleplus",
 	"description" : "Google api php client wrapper with Cloud Platform and Laravel 4 & 5 support",
 	"homepage" : "https://github.com/piffek/googleplus",
 	"keywords" : [
