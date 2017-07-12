@@ -11,6 +11,7 @@ class GooglePlusServiceProvider extends ServiceProvider{
         $this->loadRoutesFrom(__DIR__ . '/routes/routes.php');
         $this->publishes([__DIR__ . '/config.php' => 'config.php']);
         $this->loadViewsFrom(__DIR__ . '/views', 'view');
+        $this->publishes([__DIR__ . '/config.php' => config_path('config.php')]);
     }
     
     public function register(){ 

@@ -2,7 +2,6 @@
 
 namespace GooglePlus;
 
-use Illuminate\Support\Facades\Session;
 
 class Client{
     
@@ -16,6 +15,11 @@ class Client{
         $this->authService = new \Google_Service_Oauth2($this->client);
     }
     
+    /*
+     * Connect to google account.
+     * 
+     * return obj
+     */
     public function connect(){
         $client = new \Google_Client();
         $client->setApplicationName($this->config['application_name']);
@@ -28,15 +32,24 @@ class Client{
         return $client;
     }
     
-    public function index(){
-        
+    
+    /*
+     * To redirect.
+     * 
+     * return resource
+     */
+    public function beforeRedirect(){
         $authUrl = $this->client->createAuthUrl();
         return view('view::homepage', compact('authUrl'));
     }
     
    
+    /*
+     * After Redirect.
+     * 
+     * return resource
+     */
     public function afterRedirect(){
-     
         if(isset($_GET['code'])){
             $this->client->authenticate($_GET['code']);
             return redirect($this->config['redirect_url']);
